@@ -1,0 +1,28 @@
+﻿@model AnalysisViewModel;
+
+<h3>Here is the analysis of your url:</h3>
+
+<div id="carousel" class="carousel section">
+    @Model.CarouselHtml
+</div>
+<div class="word-count section">
+    <label>Word Count</label>@Model.WordCount
+</div>
+<div class="unique-word-count section">
+    <label>Unique Word Count</label>@Model.UniqueWordCount
+</div>
+<div class="frequent-words section">
+    
+    <table>
+        <thead>
+            <tr><th colspan="2">Most Frequently Used Words</th></tr>
+            <tr><th>Word</th><th>Count</th></tr>
+        </thead>
+        <tbody>
+            @foreach (FrequentWord word in Model.MostFrequentWords)
+            {
+                <tr><td>@word.Word</td><td>@word.Count</td></tr>
+            }
+        </tbody>
+    </table>
+</div>

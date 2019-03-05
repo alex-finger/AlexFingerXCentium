@@ -1,0 +1,19 @@
+﻿<partial name="_ValidationScriptsPartial" />
+
+<div class="form-section section">
+    <form id="url-analysis" action="/home/analysis" method="get">
+        <label for="url">Enter URL:</label><input type="text" name="url" />
+        <br />
+        <button type="submit" name="submit" value="submit">Submit</button>
+    </form>
+</div>
+<script>
+$( "#url-analysis" ).validate({
+  rules: {
+    url: {
+      required: true,
+      url: true
+    }
+  }
+});
+</script>

@@ -1,0 +1,11 @@
+﻿@model ErrorViewModel
+
+<h1 class="text-danger">ERROR</h1>
+<h2 class="text-danger">An error occurred while processing your request</h2>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <p>
+        <strong>Error Message:</strong> <code>@Model.Message</code>
+    </p>
+}
